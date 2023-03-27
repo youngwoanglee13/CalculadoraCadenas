@@ -1,7 +1,11 @@
 class CalculadoraDeCadenas{
     calcular(cadena){
         if(cadena != ""){
-            return parseInt(cadena);
+            if(cadena.length == 1){
+                return parseInt(cadena);
+            }else{
+                return parseInt(cadena[0]) + parseInt(cadena[2]);
+            }
         }
         return 0;
     }
