@@ -10,7 +10,9 @@ class CalculadoraDeCadenas{
         for (let i = 0; i < cadena.length; i++) {
             numero += cadena[i];
             if(cadena[i] == "," || i == cadena.length-1 || cadena[i] == "-" || cadena[i] == delimitadorPersonalizado){
-                resultado += parseInt(numero);
+                if(parseInt(numero)<=1000){
+                    resultado +=parseInt(numero) ;
+                }
                 numero = "";
             }  
         }

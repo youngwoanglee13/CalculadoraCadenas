@@ -25,5 +25,10 @@ describe("Calcular", () => {
     const calculadora = new CalculadoraDeCadenas();
     expect(calculadora.calcular("//[;]1;2;3;4-1,9")).toEqual(20);
   });
+  it("Ahora se ignoran los numeros mayores a 1000", () => {
+    const calculadora = new CalculadoraDeCadenas();
+    expect(calculadora.calcular("1001,2")).toEqual(2);
+  });
+
 
 });
