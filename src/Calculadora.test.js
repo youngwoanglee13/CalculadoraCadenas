@@ -21,5 +21,9 @@ describe("Calcular", () => {
     const calculadora = new CalculadoraDeCadenas();
     expect(calculadora.calcular("1-2-3-4")).toEqual(10);
   });
+  it("Ahora se acepta un delimitador personalizado", () => {
+    const calculadora = new CalculadoraDeCadenas();
+    expect(calculadora.calcular("//[;]1;2;3;4-1,9")).toEqual(20);
+  });
 
 });
