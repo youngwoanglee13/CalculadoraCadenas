@@ -1,13 +1,15 @@
 class CalculadoraDeCadenas{
     calcular(cadena){
-        if(cadena != ""){
-            if(cadena.length == 1){
-                return parseInt(cadena);
-            }else{
-                return parseInt(cadena[0]) + parseInt(cadena[2]);
-            }
+        let resultado = 0;
+        let numero="";
+        for (let i = 0; i < cadena.length; i++) {
+            numero += cadena[i];
+            if(cadena[i] == "," || i == cadena.length-1){
+                resultado += parseInt(numero);
+                numero = "";
+            }  
         }
-        return 0;
+        return resultado;
     }
 }
 export default CalculadoraDeCadenas;

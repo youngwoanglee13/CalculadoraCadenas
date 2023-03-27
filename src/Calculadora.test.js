@@ -13,5 +13,8 @@ describe("Calcular", () => {
     const calculadora = new CalculadoraDeCadenas();
     expect(calculadora.calcular("2,3")).toEqual(5);
   });
-  
+  it("Toma en cuenta cadena con varios números", () => {
+    const calculadora = new CalculadoraDeCadenas();
+    expect(calculadora.calcular("1,2,3,4")).toEqual(10);
+  });
 });
