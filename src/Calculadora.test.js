@@ -17,4 +17,9 @@ describe("Calcular", () => {
     const calculadora = new CalculadoraDeCadenas();
     expect(calculadora.calcular("1,2,3,4")).toEqual(10);
   });
+  it("Ahora el guion es un delimitador", () => {
+    const calculadora = new CalculadoraDeCadenas();
+    expect(calculadora.calcular("1-2-3-4")).toEqual(10);
+  });
+
 });

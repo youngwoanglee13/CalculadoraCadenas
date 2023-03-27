@@ -4,7 +4,7 @@ class CalculadoraDeCadenas{
         let numero="";
         for (let i = 0; i < cadena.length; i++) {
             numero += cadena[i];
-            if(cadena[i] == "," || i == cadena.length-1){
+            if(cadena[i] == "," || i == cadena.length-1 || cadena[i] == "-"){
                 resultado += parseInt(numero);
                 numero = "";
             }  
